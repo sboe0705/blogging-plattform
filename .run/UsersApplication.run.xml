@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="UsersApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+    <classpathModifications>
+      <entry path="$PROJECT_DIR$/users/src/test/resources" />
+    </classpathModifications>
+    <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+    <option name="MAIN_CLASS_NAME" value="de.sboe0705.users.UsersApplication" />
+    <module name="users" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="de.sboe0705.users.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
