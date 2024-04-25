@@ -10,7 +10,10 @@ Spring Data is a part of the Spring Framework that simplifies the development of
 
 The persistence of data in a Spring Boot application is supported by Spring Data JPA ([Jakarta Persistence API](https://de.wikipedia.org/wiki/Jakarta_Persistence_API)). JPA is a Java specification for mapping Java objects to relational databases. Spring Data JPA builds on top of it and offers additional abstractions and features to further simplify database interaction.
 
-There is a useful guide provided by Spring to get a detailed introduction into this topic: [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa)
+Spring documentation:
+- [JPA and Spring Data JPA](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html#data.sql.jpa-and-spring-data)
+- [Spring Data JPA](https://docs.spring.io/spring-data/jpa/reference/index.html)
+- [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa) (Guide)
 
 ### Entity Classes and Mapping
 
@@ -37,6 +40,10 @@ Spring Data JPA simplifies data access by providing repositories that automatica
 ⚠️ The `UserRepository` ([UserRepository.java](../d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/main/java/de/sboe0705/users/persistence/UserRepository.java)) interface serves as an abstraction layer for managing `User` entities in the database. It extends the `CrudRepository` interface provided by Spring Data, which offers fundamental CRUD operations for entities. This interface seamlessly integrates with Spring Boot applications and offers convenient methods for interacting with the database.
 
 ### Custom Repository Methods
+
+Spring documentation:
+- [Defining Query Methods](https://docs.spring.io/spring-data/jpa/reference/data-commons/repositories/query-methods-details.html)
+- [Repository query keywords](https://docs.spring.io/spring-data/jpa/reference/data-commons/repositories/query-keywords-reference.html)
 
 ### Testing
 
