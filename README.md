@@ -14,7 +14,7 @@ There is a useful guide provided by Spring to get a detailed introduction into t
 
 ### Entity Classes and Mapping
 
-⚠️ To persist data, you simply define POJOs (Plain Old Java Objects) that represent your data model as entities. These entities are annotated to define their relationship with the database. In the example entity class `User` ([User.java](/blob/d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/main/java/de/sboe0705/users/persistence/User.java)) the following annotations are used: 
+⚠️ To persist data, you simply define POJOs (Plain Old Java Objects) that represent your data model as entities. These entities are annotated to define their relationship with the database. In the example entity class `User` ([User.java](../d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/main/java/de/sboe0705/users/persistence/User.java)) the following annotations are used: 
 
 1. `@Entity`: This annotation marks the `User` class as a JPA entity, meaning it will be managed by the Java Persistence API and can be persisted to a database.
 
@@ -34,7 +34,7 @@ The other fields `firstName` and `lastName` are simple attributes of the entity,
 
 Spring Data JPA simplifies data access by providing repositories that automatically handle CRUD (Create, Read, Update, Delete) operations for entities. These repositories are defined as interfaces and implemented automatically by Spring.
 
-⚠️ The `UserRepository` ([UserRepository.java](/blob/d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/main/java/de/sboe0705/users/persistence/UserRepository.java)) interface serves as an abstraction layer for managing `User` entities in the database. It extends the `CrudRepository` interface provided by Spring Data, which offers fundamental CRUD operations for entities. This interface seamlessly integrates with Spring Boot applications and offers convenient methods for interacting with the database.
+⚠️ The `UserRepository` ([UserRepository.java](../d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/main/java/de/sboe0705/users/persistence/UserRepository.java)) interface serves as an abstraction layer for managing `User` entities in the database. It extends the `CrudRepository` interface provided by Spring Data, which offers fundamental CRUD operations for entities. This interface seamlessly integrates with Spring Boot applications and offers convenient methods for interacting with the database.
 
 ### Custom Repository Methods
 
