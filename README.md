@@ -47,6 +47,12 @@ Spring documentation:
 
 ### Testing
 
+⚠️ In Spring Boot, the `data.sql` file ([data.sql](../d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/test/resources/data.sql)) in the classpath automatically populates the database with initial data upon application startup or tests. This file, typically located under `src/main/resources`, contains SQL statements to insert seed or test data into the database tables. ⚠️ Additionally, setting the `spring.jpa.defer-datasource-initialization=true` property in the `application.properties` file delays the initialization of the data source until after Hibernate has set up the tables.
+
+⚠️ The `UserRepositoryTest` class ([UserRepositoryTest.java](../d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/test/java/de/sboe0705/users/persistence/UserRepositoryTest.java)) is a JUnit test class used to test the functionality of the `UserRepository` interface.
+
+The `@DataJpaTest` annotation marks the test class as a JPA test class and is part of the Spring Test framework. This annotation configures the test to load only the components relevant to the JPA layer, making the test faster and more isolated. By default, it uses an embedded H2 database to execute the database operations during the test. See [Embedded Database Support](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html#data.sql.datasource.embedded) for further information about embedded databases.
+
 ### H2-Console
 
 ## REST Services
