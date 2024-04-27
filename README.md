@@ -55,6 +55,10 @@ The `@DataJpaTest` annotation marks the test class as a JPA test class and is pa
 
 ### H2-Console
 
+The H2 Console is a web-based database management tool provided by the [H2 Database Engine](https://www.h2database.com). It allows users to interact with the H2 in-memory (used by Spring Boot as default) via a browser-based interface.
+
+⚠️ To enable the H2 Console in a Spring Boot application, set the application property `spring.h2.console.enabled=true`. After that the H2 Console is available under [http://localhost:8080/h2-console](http://localhost:8080/h2-console). For en even more comfortable usage, define a stable database name with the application property `spring.datasource.url=jdbc:h2:mem:users` (as default a random name is used).
+
 ## REST Services
 
 ### RestController
