@@ -49,6 +49,8 @@ The other fields `firstName` and `lastName` are simple attributes of the entity,
 
 ### Advanced Mapping Techniques
 
+***// TODO** Many-To-Many - Mapping*
+
 ### Repositories and CRUD Operations
 
 Spring Data JPA simplifies data access by providing repositories that automatically handle CRUD (Create, Read, Update, Delete) operations for entities. These repositories are defined as interfaces and implemented automatically by Spring.
@@ -56,6 +58,8 @@ Spring Data JPA simplifies data access by providing repositories that automatica
 ⚠️ The `UserRepository` ([UserRepository.java](../d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/main/java/de/sboe0705/users/persistence/UserRepository.java)) interface serves as an abstraction layer for managing `User` entities in the database. It extends the `CrudRepository` interface provided by Spring Data, which offers fundamental CRUD operations for entities. This interface seamlessly integrates with Spring Boot applications and offers convenient methods for interacting with the database.
 
 ### Custom Repository Methods
+
+***// TODO** e.g. findFooByBarOrderByMoo*
 
 Spring documentation:
 - [Defining Query Methods](https://docs.spring.io/spring-data/jpa/reference/data-commons/repositories/query-methods-details.html)
@@ -77,20 +81,56 @@ The H2 Console is a web-based database management tool provided by the [H2 Datab
 
 ⚠️ To enable the H2 Console in a Spring Boot application, set the application property `spring.h2.console.enabled=true`. After that the H2 Console is available under [http://localhost:8080/h2-console](http://localhost:8080/h2-console). For en even more comfortable usage, define a stable database name with the application property `spring.datasource.url=jdbc:h2:mem:users` (as default a random name is used).
 
+### Database Migration
+
+***// TODO** Flyway*
+
+---
+
 ## REST Services
 
 ### RestController
 
+***// TODO***
+
 ### Testing
+
+***// TODO** test without server (MockMvc)* 
+
+***// TODO** integration test with server*
+
+Spring Guide: https://spring.io/guides/gs/testing-web
 
 ### OpenAPI / Swagger
 
+***// TODO***
+
 ### Hypermedia-Driven REST service
+
+***// TODO** HATEAOS*
+
+***// TODO** RESTful*
+
+Spring Guide: https://spring.io/guides/gs/rest-hateoas
 
 ### HAL Explorer
 
+***// TODO***
+
 ### Spring Data REST
+
+***// TODO***
+
+Spring Guide: https://spring.io/guides/gs/accessing-data-rest 
+
+### Security
+
+***// TODO** OIDC with authentication server*
+
+---
 
 # IntelliJ IDEA
 
 ## Run Application
+
+***// TODO***
