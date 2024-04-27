@@ -63,7 +63,7 @@ Spring documentation:
 
 ### Testing
 
-⚠️ In Spring Boot, the `data.sql` file ([data.sql](../d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/test/resources/data.sql)) in the classpath automatically populates the database with initial data upon application startup or tests. This file, typically located under `src/main/resources`, contains SQL statements to insert seed or test data into the database tables. ⚠️ Additionally, setting the `spring.jpa.defer-datasource-initialization=true` property in the `application.properties` file delays the initialization of the data source until after Hibernate has set up the tables.
+⚠️ In Spring Boot, the `data.sql` file ([data.sql](../56d9ae648feb53f07f0aca15215555b6c6deb0d6/users/src/test/resources/data.sql)) in the classpath automatically populates the database with initial data upon application startup or tests. This file, typically located under `src/main/resources`, contains SQL statements to insert seed or test data into the database tables. ⚠️ Additionally, setting the `spring.jpa.defer-datasource-initialization=true` property in the `application.properties` file delays the initialization of the data source until after Hibernate has set up the tables.
 
 ⚠️ The `UserRepositoryTest` class ([UserRepositoryTest.java](../d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/test/java/de/sboe0705/users/persistence/UserRepositoryTest.java)) is a JUnit test class used to test the functionality of the `UserRepository` interface.
 
