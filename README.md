@@ -4,11 +4,27 @@ This documentation serves as a companion resource for developing an application 
 
 Essential parts, important source code reference and pitfalls are marked with the symbol ⚠️ to highlight them for quick flipping readers.
 
+## Setup
+
+⚠️ Setting up a Spring Boot application is super easy: Just create a Maven project and set `org.springframework.boot:spring-boot-starter-parent` as parent. This integrated all required dependency (and managed dependencies) as well as the `spring-boot-maven-plugin` providing a load of goal to support the build and developer experience. See the `pom.xml` of the users application: [pom.xml](../579f6ec83f1d97a1b07486366220d59dd1405d00/users/pom.xml#L7-L29)   
+
+Further Spring Boot features are integrated by added respective Maven Dependencies, e.g. `org.springframework.boot:spring-boot-starter-web` for web applications (described in detail later). 
+
+For more information and alternatives see [Spring Boot Maven Plugin Documentation / Using the Plugin](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/#using).
+
+### Setup Generator
+
+⚠️ If you already know which Spring Boot Features you need, you can use the [spring initializr](https://start.spring.io/) to generate your project setup by simply defining some basic configuration (JDK version, build tool, Maven coordinates, etc.) and selecting the required Spring Boot dependencies. You get a ZIP file containing the initial project setup which can be extended.
+
+---
+
 ## Persistence
 
 Spring Data is a part of the Spring Framework that simplifies the development of data access layers in Java applications. It provides a consistent and efficient way to interact with various data sources such as relational databases, NoSQL databases, and more.
 
 The persistence of data in a Spring Boot application is supported by Spring Data JPA ([Jakarta Persistence API](https://de.wikipedia.org/wiki/Jakarta_Persistence_API)). JPA is a Java specification for mapping Java objects to relational databases. Spring Data JPA builds on top of it and offers additional abstractions and features to further simplify database interaction.
+
+⚠️ Spring Data JPA can easily be included by adding the Maven dependency `org.springframework.boot:spring-boot-starter-data-jpa` as well as the database dependency e.g. `com.h2database:h2`, see [pom.xml](../579f6ec83f1d97a1b07486366220d59dd1405d00/users/pom.xml).
 
 Spring documentation:
 - [JPA and Spring Data JPA](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html#data.sql.jpa-and-spring-data)
@@ -52,6 +68,8 @@ Spring documentation:
 ⚠️ The `UserRepositoryTest` class ([UserRepositoryTest.java](../d9f1756c0291ebfc4809d45250ae1cfd1bb8cbaa/users/src/test/java/de/sboe0705/users/persistence/UserRepositoryTest.java)) is a JUnit test class used to test the functionality of the `UserRepository` interface.
 
 The `@DataJpaTest` annotation marks the test class as a JPA test class and is part of the Spring Test framework. This annotation configures the test to load only the components relevant to the JPA layer, making the test faster and more isolated. By default, it uses an embedded H2 database to execute the database operations during the test. See [Embedded Database Support](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html#data.sql.datasource.embedded) for further information about embedded databases.
+
+⚠️ You need the Maven dependencies `org.springframework.boot:spring-boot-starter-test` (_test_ scoped) for testing, see [pom.xml](../579f6ec83f1d97a1b07486366220d59dd1405d00/users/pom.xml).
 
 ### H2-Console
 
