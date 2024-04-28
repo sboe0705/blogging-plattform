@@ -95,11 +95,23 @@ The H2 Console is a web-based database management tool provided by the [H2 Datab
 
 ### Testing
 
-***// TODO** test without server (MockMvc)* 
-
-***// TODO** integration test with server*
+REST services can be tested either in unit tests or in integration tests with the whole application running on a web server. For further descriptions see the next two chapters.
 
 Spring Guide: https://spring.io/guides/gs/testing-web
+
+#### Unit Testing Web Layer
+
+***// TODO***
+
+#### Integration Testing with server
+
+⚠️ The `UserRestRepositoryIT` class (see [UserRestRepositoryIT.java](../579f6ec83f1d97a1b07486366220d59dd1405d00/users/src/test/java/de/sboe0705/users/rest/UserRestRepositoryIT.java)) tests the auto-generated REST service provided by the `UserRepository` in an integration test scenario. In this test, the server is started, and the web layer is tested with real HTTP requests. The test is configured with the following annotations:
+
+1. `@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)`: Loads the entire Spring Boot application context including the embedded servlet container with a randomly chosen port for the test.
+
+2. `@LocalServerPort`: Injects the local port of the running server into the test class, necessary to dynamically construct the URLs in the test methods.
+
+3. `@Autowired TestRestTemplate`: Provided by Spring Boot for making HTTP requests.
 
 ### OpenAPI / Swagger
 
@@ -120,6 +132,8 @@ Spring Guide: https://spring.io/guides/gs/rest-hateoas
 ### Spring Data REST
 
 ***// TODO***
+
+⚠️ The `UserRestRepositoryTest` class (see [UserRestRepositoryTest.java](../579f6ec83f1d97a1b07486366220d59dd1405d00/users/src/test/java/de/sboe0705/users/rest/UserRestRepositoryTest.java)) tests the auto-generated REST service provided by the `UserRepository`. Since in this case the repository, rather than controller class, serves the REST service, the `@WebMvcTest` annotation cannot be used. Instead, the complete Spring Boot application context is loaded using `@SpringBootTest` and a `MockMvc` instance is injected with `@AutoConfigureMockMvc`.
 
 Spring Guide: https://spring.io/guides/gs/accessing-data-rest 
 
