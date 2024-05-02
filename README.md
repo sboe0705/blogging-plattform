@@ -131,7 +131,7 @@ Spring Guide: https://spring.io/guides/gs/rest-hateoas
 
 ### Spring Data REST
 
-***// TODO***
+⚠️ Spring Data REST is a convenient way to expose CRUD operations of Spring Data Repositories as RESTful services with minimal configuration. After including the Maven dependency `org.springframework.boot:spring-boot-starter-data-rest` (see [pom.xml](../579f6ec83f1d97a1b07486366220d59dd1405d00/users/pom.xml#L36-L39)) the configured repositories expose there CRUD operations as RESTful services using the HAL Media-Type format as default, e.g. the `UserRepository` (see [UserRepository.java](../579f6ec83f1d97a1b07486366220d59dd1405d00/users/src/main/java/de/sboe0705/users/persistence/UserRepository.java)) is accessible under http://localhost:8080/api/users.
 
 ⚠️ The `UserRestRepositoryTest` class (see [UserRestRepositoryTest.java](../579f6ec83f1d97a1b07486366220d59dd1405d00/users/src/test/java/de/sboe0705/users/rest/UserRestRepositoryTest.java)) tests the auto-generated REST service provided by the `UserRepository`. Since in this case the repository, rather than controller class, serves the REST service, the `@WebMvcTest` annotation cannot be used. Instead, the complete Spring Boot application context is loaded using `@SpringBootTest` and a `MockMvc` instance is injected with `@AutoConfigureMockMvc`.
 
