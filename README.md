@@ -127,7 +127,9 @@ Spring Guide: https://spring.io/guides/gs/rest-hateoas
 
 ### HAL Explorer
 
-***// TODO***
+The Spring Boot HAL Explorer is a helpful tool for exploring Spring Data REST APIs that utilize the HAL (Hypertext Application Language) Media-Type format. It provides a user-friendly graphical interface allowing developers to navigate through available resources, understand their structure and interact with them.
+
+⚠️ To integrate it into your Spring Boot application, you have to add the Maven dependency `org.springframework.data:spring-data-rest-hal-explorer` (see [pom.xml](../579f6ec83f1d97a1b07486366220d59dd1405d00/users/pom.xml#L40-L43)) making the HAL Explorer accessible under http://localhost:8080/api/explorer (the base url for spring data REST services, including the HAL explorer, can be defined in the application property `spring.data.rest.basePath`, see [application.properties](../579f6ec83f1d97a1b07486366220d59dd1405d00/users/src/main/resources/application.properties#L4)).
 
 ### Spring Data REST
 
