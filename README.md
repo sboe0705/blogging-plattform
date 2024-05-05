@@ -149,4 +149,10 @@ Spring Guide: https://spring.io/guides/gs/accessing-data-rest
 
 ## Run Application
 
-***// TODO***
+To run a Spring Boot application from the IDE, the default Run Configuration has to be changed. Otherwise the application is stopped right after the context setup (as no Tomcat is available in the classpath). The following steps are necessary:
+1. Click on "*Edit Configurations ...*"
+2. Select the respective "*Application*"
+3. Click on "*Modify options*" and select the checkbox "*Add dependencies with 'provided' scope to classpath*"
+4. The option "*Add VM options*" might also be useful e.g. to active Spring Profiles
+
+An example Run Configuration is available under [UsersApplication.run.xml](../579f6ec83f1d97a1b07486366220d59dd1405d00/.run/UsersApplication.run.xml)).
